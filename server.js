@@ -29,6 +29,7 @@ app.delete("/:id",async (req,res)=>{
 })
 
 app.post("/", jsonParser ,async (req,res)=>{
+    console.log("okkkkk")
     await new Comment({text: req.body.text}).save()
     res.send("ok")
 })
